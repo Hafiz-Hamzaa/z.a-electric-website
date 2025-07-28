@@ -1,0 +1,387 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  user-select: none;
+}
+body,html{
+  overflow-x: hidden;
+}
+body {
+  background-color: #ebf3f5;
+  overflow-x: hidden;
+}
+
+/* Navbar Styling */
+nav {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+ul {
+  display: flex;
+  align-items: center;
+  margin-right: 150px;
+  gap: 100px;
+}
+ul li {
+  list-style-type: none;
+}
+ul li a {
+  color: #596774;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 14px;
+  text-decoration: none;
+}
+li a:hover {
+  border-bottom: 3px solid #35a7a0;
+}
+.logo img {
+  width: 60px;
+  height: 45px;
+  margin-left: 110px;
+}
+.contactBtn {
+  width: 107px;
+  height: 40px;
+  background-color: #35a7a0;
+  color: #fff;
+  border-radius: 12px;
+  border: none;
+  font-weight: bold;
+  transition: 1s ;
+}
+.contactBtn:hover{
+    transform: scale(1.09);
+}
+
+/* Hamburger menu style */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  margin-right: 30px;
+  cursor: pointer;
+}
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: #35a7a0;
+  border-radius: 5px;
+}
+
+/* Responsive Navbar for mobile */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+  .logo img{
+    position: relative;
+    right: 30px;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    background-color: #ebf3f5;
+    display: none;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    padding: 20px 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  ul {
+    margin-right: 0;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .contactBtn {
+    margin-top: 10px;
+  }
+}
+
+.about-banner {
+  height: 40vh;
+  background: url('https://media.istockphoto.com/id/1193382198/photo/handsome-real-estate-agent-in-suit-standing-in-building-in-construction-process-and-using.jpg?b=1&s=612x612&w=0&k=20&c=B_QbjgJUD5s4Ss6pNYHEtfG41E1x3Kxvp8fd2Q2wEQQ=') no-repeat center center/cover;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-banner .overlay {
+  background-color: rgba(0, 0, 0, 0.45);
+  padding: 40px;
+  text-align: center;
+  color: #fff;
+  width: 100%;
+}
+
+.about-banner h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.about-banner p {
+  font-size: 18px;
+  margin-bottom: 25px;
+  color: #f1f1f1;
+}
+
+.about-banner .btn {
+  background-color: #35A7A0;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.about-banner .btn:hover {
+  background-color: #2C3E50;
+}
+
+/* ✅ Responsive */
+@media (max-width: 768px) {
+  .about-banner h1 {
+    font-size: 32px;
+  }
+  .about-banner p {
+    font-size: 16px;
+    padding: 0 15px;
+  }
+  .about-banner .btn {
+    padding: 10px 20px;
+  }
+}
+
+
+
+.about-info {
+  padding: 60px 20px;
+  background-color: #f5f9fa;
+}
+
+.about-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 60px;
+  gap: 30px;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.about-row.reverse {
+  flex-direction: row-reverse;
+}
+
+.about-img img {
+  width: 350px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.about-text {
+  max-width: 500px;
+}
+
+.about-text h2 {
+  font-size: 28px;
+  color: #2C3E50;
+  margin-bottom: 10px;
+}
+
+.about-text p {
+  font-size: 16px;
+  color: #596774;
+}
+
+.divider {
+  width: 2px;
+  height: 200px;
+  background-color: #ccc;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .about-row {
+    flex-direction: column;
+  }
+
+  .divider {
+    display: none;
+  }
+
+  .about-img img {
+    width: 100%;
+    max-width: 90vw;
+  }
+
+  .about-text {
+    text-align: center;
+  }
+}
+
+
+.team-section {
+  padding: 60px 20px;
+  background-color: #EBF3F5;
+  text-align: center;
+}
+
+.team-section h2 {
+  font-size: 36px;
+  color: #2C3E50;
+  margin-bottom: 40px;
+}
+
+.team-container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.team-member {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  padding: 30px;
+  max-width: 320px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-10px);
+}
+
+.team-member img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 4px solid #35A7A0;
+}
+
+.team-member h3 {
+  font-size: 24px;
+  color: #2C3E50;
+  margin-bottom: 5px;
+}
+
+.role {
+  font-weight: 600;
+  color: #35A7A0;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.bio {
+  font-size: 15px;
+  color: #596774;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+.contact-btn-container {
+  margin-top: 20px;
+}
+
+.contact-btn {
+  display: inline-block;
+  background-color: #35A7A0;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  font-size: 16px;
+  box-shadow: 0 3px 8px rgba(53, 167, 160, 0.5);
+}
+
+.contact-btn:hover {
+  background-color: #2c776f;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .team-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+
+.promo-banner {
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('../assets/banner.jpg');
+  /* background-image: url('./assets/banner.jpg'); */
+  background-size: cover;
+  background-position: center;
+  padding: 100px 40px;
+  text-align: center;
+  position: relative;
+  margin-top: 60px;
+  border-radius: 20px;
+}
+
+.promo-banner::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  border-radius: 20px;
+}
+
+.promo-content {
+  position: relative;
+  color: white;
+  z-index: 1;
+}
+
+.promo-content h2 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.promo-content p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.promoBtn {
+  background-color: #35A7A0;
+  color: white;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.promoBtn:hover {
+  background-color: #2b8e8a;
+}
+

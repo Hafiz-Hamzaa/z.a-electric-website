@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product | Z.A Electric</title>
+    <link rel="stylesheet" href="product.css">
+    <!-- AOS CSS -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+</head>
+<body>
+      <!-- Navbar -->
+    <nav>
+      <div class="logo">
+        <img src="../assets/logo (1).png" alt="logo" />
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about/about.html">About</a></li>
+        <li><a href="../products/product.html">Products</a></li>
+        <li><a href="../gallery/gallery.html">Gallery</a></li>
+        <li><a href="../contact/contact.html"><button class="contactBtn">Contact</button></a></li>
+      </ul>
+
+      <!-- Hamburger Icon for Mobile -->
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+
+    <!-- Products Filtering -->
+     <!-- Products Page -->
+<section class="products-section">
+  <div class="container">
+    <h2 class="section-title" data-aos="zoom-in" data-aos-duration="3000">Our Products</h2>
+    
+    <!-- Search input -->
+    <input 
+      type="text" 
+      class="product-search-input" 
+      placeholder="Search products by name..."
+    />
+
+    <!-- Cards will render here via JavaScript -->
+    <div class="product-cards-container">
+      <!-- JS will inject product cards here -->
+    </div>
+  </div>
+</section>
+
+  <!-- Footer Banner -->
+  <section class="promo-banner">
+  <div class="promo-content">
+    <h2 data-aos="zoom-in" data-aos-duration="3000">Z.A Electric – Smart Tools, Smarter Choices</h2>
+    <p>Modern tools, reliable service, unmatched quality.</p>
+    <a href="../gallery/gallery.html"><button class="promoBtn">Explore Now</button></a>
+  </div>
+</section>
+
+<!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+    <script src="product.js"></script>
+</body>
+</html>
